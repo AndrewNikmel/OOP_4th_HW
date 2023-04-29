@@ -16,7 +16,7 @@ public class Team<T extends Warrior> {
             warriors.append(item);
             warriors.append("\n");
         }
-        warriors.append(String.format("healthpoint %s, damage is %s ,Maximal range is %s", healthpoints(), getDamage(),
+        warriors.append(String.format("healthpoint %s, damage is %s, maximal range is %s", healthpoints(), getDamage(),
                 maxRange()));
         return warriors.toString();
     }

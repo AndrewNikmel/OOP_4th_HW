@@ -1,4 +1,4 @@
-public class Assassin extends Warrior<Knife>{
+public class Assassin extends Warrior<Knife> {
 
     public Assassin(String name, Knife knife, int healthpoint) {
         super(name, knife, healthpoint);
@@ -8,5 +8,5 @@ public class Assassin extends Warrior<Knife>{
     public String toString() {
         return String.format("Assassin %s", super.toString());
     }
-    
+
 }

@@ -34,10 +34,8 @@ public abstract class Warrior<T extends Weapon> {
         return healthpoint;
     }
 
-    public void setHP() {
+    public void setHP(int healthpoint) {
         this.healthpoint = healthpoint;
     }
 
-    public void setHP(int i) {
-    }
 }
