@@ -1,12 +1,12 @@
 public class SteelShield implements Shield {
     @Override
     public int protection() {
-        return 3;
+        return 5;
     }
 
     @Override
     public int healing() {
-        return 1;
+        return 3;
     }
 
     @Override

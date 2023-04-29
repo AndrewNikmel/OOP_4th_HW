@@ -1,11 +1,11 @@
 public class GoldenShield implements Shield {
     @Override
     public int protection() {
-        return 5;
+        return 9;
     }
 
     public int healing(){
-        return 2;
+        return 7;
     }
 
     @Override

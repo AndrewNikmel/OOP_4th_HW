@@ -13,8 +13,13 @@ public class Maina {
         System.out.println(archersTeam);
         System.out.println(assassTeam);
 
-        Battle battle = new Battle(new Archer("Sam", new Bow(), 40, new GoldenShield()), new Assassin("Connor", new Knife(), 50, new SteelShield()));
+        Battle battle = new Battle(new Archer("Sam", new Bow(), 40, new GoldenShield()),
+                new Assassin("Connor", new Knife(), 50, new SteelShield()));
         Warrior winner = battle.fight();
         System.out.printf("!!! %s wins the battle !", winner);
+        System.out.printf("\n The weakest shield by Assassins has %s \n", assassTeam.weakestShield());
+        System.out.printf("The weakest shield by Archers has %s \n", archersTeam.weakestShield());
+
+        
     }
 }
