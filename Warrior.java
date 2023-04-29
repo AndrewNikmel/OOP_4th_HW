@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Warrior <T extends Weapon> {
+public abstract class Warrior<T extends Weapon> {
     private String name;
     protected T weapon;
 
@@ -14,7 +14,7 @@ public abstract class Warrior <T extends Weapon> {
 
     private int healthpoint;
 
-    public Warrior(String name, T weapon, int healthpoint){
+    public Warrior(String name, T weapon, int healthpoint) {
         this.name = name;
         this.weapon = weapon;
         this.healthpoint = healthpoint;
@@ -25,16 +25,16 @@ public abstract class Warrior <T extends Weapon> {
         return String.format("Name is %s, the weapon is %s, has %d healthpoints", name, weapon, healthpoint);
     }
 
-    public int hit(){
+    public int hit() {
         Random random = new Random();
         return random.nextInt(weapon.damage());
     }
 
-    public int getHP(){
+    public int getHP() {
         return healthpoint;
     }
 
-    public void setHP(){
+    public void setHP() {
         this.healthpoint = healthpoint;
     }
 

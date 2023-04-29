@@ -15,7 +15,8 @@ public class Maina {
         System.out.println(archersTeam);
         System.out.println(assassTeam);
 
-        
-
+        Battle battle = new Battle(new Archer("Sam", new Bow(), 30), new Assassin("Connor", new Knife(), 40));
+        Warrior winner = battle.fight();
+        System.out.println(winner);
     }
 }
