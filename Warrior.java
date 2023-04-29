@@ -13,16 +13,18 @@ public abstract class Warrior<T extends Weapon> {
     }
 
     private int healthpoint;
+    private Shield shield;
 
-    public Warrior(String name, T weapon, int healthpoint) {
+    public Warrior(String name, T weapon, int healthpoint, Shield shield) {
         this.name = name;
         this.weapon = weapon;
         this.healthpoint = healthpoint;
+        this.shield = shield;
     }
 
     @Override
     public String toString() {
-        return String.format("Name - %s, has %s, has %d healthpoints", name, weapon, healthpoint);
+        return String.format("Name - %s, has %s, has %d healthpoints and %s", name, weapon, healthpoint, shield);
     }
 
     public int hit() {
@@ -36,6 +38,16 @@ public abstract class Warrior<T extends Weapon> {
 
     public void setHP(int healthpoint) {
         this.healthpoint = healthpoint;
+    }
+
+    public int safety() {
+        Random random = new Random();
+        return random.nextInt(shield.protection());
+    }
+
+    public int holy() {
+        Random random = new Random();
+        return random.nextInt(shield.healing());
     }
 
 }

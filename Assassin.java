@@ -1,7 +1,7 @@
 public class Assassin extends Warrior<Knife> {
 
-    public Assassin(String name, Knife knife, int healthpoint) {
-        super(name, knife, healthpoint);
+    public Assassin(String name, Knife knife, int healthpoint, SteelShield sSh) {
+        super(name, knife, healthpoint, sSh);
     }
 
     @Override
