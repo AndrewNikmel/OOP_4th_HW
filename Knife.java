@@ -6,6 +6,6 @@ public class Knife implements Weapon{
 
     @Override
     public String toString() {
-        return String.format("Knife makes maximal %s damage", damage());
+        return String.format("knife, what makes maximal %s points of damage", damage());
     }
 }

@@ -22,7 +22,7 @@ public abstract class Warrior<T extends Weapon> {
 
     @Override
     public String toString() {
-        return String.format("Name is %s, the weapon is %s, has %d healthpoints", name, weapon, healthpoint);
+        return String.format("Name - %s, has %s, has %d healthpoints", name, weapon, healthpoint);
     }
 
     public int hit() {

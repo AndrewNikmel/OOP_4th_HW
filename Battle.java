@@ -10,16 +10,17 @@ public class Battle {
     public Warrior fight() {
         while (one.getHP() > 0 && two.getHP() > 0) {
             int hit1 = one.hit();
-            System.out.printf("The first warrior hit damage %s. \n", hit1);
+            System.out.printf("The first warrior hit damage makes %s points. \n", hit1);
             two.setHP(two.getHP() - hit1);
-            System.out.printf("The second warrior has %s HP. \n", two.getHP());
+            System.out.printf("%s HP remains by the second warrior. \n", two.getHP());
             if (two.getHP() <= 0) {
                 return one;
             }
             int hit2 = two.hit();
-            System.out.printf("The second warrior hit damage %s. \n", hit2);
+            System.out.printf("The second warrior hit damage makes %s points. \n", hit2);
             one.setHP(one.getHP() - hit2);
-            System.out.printf("The first warrior has %s HP. \n", one.getHP());
+            System.out.printf("%s HP remains by the first warrior. \n", one.getHP());
+            System.out.println("They continue the battle");
         }
         return two;
     }

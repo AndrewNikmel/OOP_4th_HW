@@ -14,6 +14,6 @@ public class Maina {
 
         Battle battle = new Battle(new Archer("Sam", new Bow(), 30), new Assassin("Connor", new Knife(), 40));
         Warrior winner = battle.fight();
-        System.out.println(winner);
+        System.out.printf("!!! %s wins the battle !!!", winner);
     }
 }
