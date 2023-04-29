@@ -2,7 +2,7 @@ import java.util.Random;
 
 public abstract class Warrior {
     private String name;
-    private Weapon weapon;
+    protected Weapon weapon;
     private int healthpoint;
 
     public Warrior(String name, Weapon weapon, int healthpoint){
