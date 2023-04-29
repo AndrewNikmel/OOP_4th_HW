@@ -1,11 +1,20 @@
 import java.util.Random;
 
-public abstract class Warrior {
+public abstract class Warrior <T extends Weapon> {
     private String name;
-    protected Weapon weapon;
+    protected T weapon;
+
+    public T getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(T weapon) {
+        this.weapon = weapon;
+    }
+
     private int healthpoint;
 
-    public Warrior(String name, Weapon weapon, int healthpoint){
+    public Warrior(String name, T weapon, int healthpoint){
         this.name = name;
         this.weapon = weapon;
         this.healthpoint = healthpoint;
@@ -19,5 +28,16 @@ public abstract class Warrior {
     public int hit(){
         Random random = new Random();
         return random.nextInt(weapon.damage());
+    }
+
+    public int getHP(){
+        return healthpoint;
+    }
+
+    public void setHP(){
+        this.healthpoint = healthpoint;
+    }
+
+    public void setHP(int i) {
     }
 }
