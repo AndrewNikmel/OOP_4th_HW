@@ -10,6 +10,6 @@ public class Bow implements Weapon{
 
     @Override
     public String toString() {
-        return String.format("Bow, max damage is %d, max range is d%", damage(), range());
+        return String.format("Bow, max damage is %d, max range is %d", damage(), range());
     }
 }
